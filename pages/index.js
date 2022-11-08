@@ -2,7 +2,7 @@ import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset.js";
 import Menu from "../src/components/Menu.js";
-import { StyledTimeline } from "../src/components/Timeline.js"
+import { StyledTimeline } from "../src/components/Timeline.js";
 
 function HomePage() {
     const estiloDaHomePage = {
@@ -37,7 +37,7 @@ export default HomePage
 // }
 
 const StyledHeader = styled.div`
-    img {
+    .foto-perfil {
         width: 80px;
         height: 80px;
         border-radius: 50%
@@ -50,14 +50,17 @@ const StyledHeader = styled.div`
         padding: 16px 32px;
         gap: 16px;
     }
+    .banner{
+        width: 100%;
+        height: 100 px;
+    }
 `;
 function Header() {
     return (
         <StyledHeader>
-            {/* <img src="banner" /> */}
-
+            <img className="banner" src={"..src/components/images/background.jpg"} />
             <section className="user-info">
-                <img src={`https://github.com/${config.github}.png`} />
+                <img className="foto-perfil" src={`https://github.com/${config.github}.png`} />
                 <div>
                     <h2>
                         {config.name}
